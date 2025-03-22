@@ -16,6 +16,10 @@ header{
     height: 40px;
 }
 
+main{
+    padding-bottom: 50px;
+}
+
 .fondo{
     background-image: url(../img/fondo-animales.jpg);
     background-repeat: no-repeat;
@@ -23,6 +27,7 @@ header{
 
 cont-animales{
     padding: 50px 0 50px 0;
+    margin-bottom: 50px;
 }
 
 div h1{
@@ -40,9 +45,7 @@ section div img{
     padding: 5px 0 5px 0;;
 }
 
-footer{
-    margin-top: 50px;
+footer div{
     background-color: rgb(71, 53, 53);
-    text-align: center;
     color: white;
 }
