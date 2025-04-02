@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animales Salvajes - App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+   <!-- Barra de navegación -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            Animales Salvajes
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/videos.html">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="app.html">App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Sección del QR -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Descarga nuestra aplicación móvil</h2>
+            <p class="lead mb-5">Escanea el código QR con tu dispositivo Android para descargar nuestra app y llevar información sobre animales salvajes a todas partes.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://play.google.com/store/apps/details?id=com.animalessalvajes.app" 
+                                alt="QR para descargar la app" class="img-fluid mb-3">
+                            <h5 class="card-title">Animales Salvajes App</h5>
+                            <p class="card-text">Disponible en Google Play Store</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.animalessalvajes.app" 
+                                class="btn btn-primary" target="_blank">
+                                <i class="fab fa-google-play me-2"></i> Ir a Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Animales Salvajes</h5>
+                    <p>Descubre la belleza y diversidad de la vida salvaje en nuestro planeta.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white">Inicio</a></li>
+                        <li><a href="../pages/videos.html" class="text-white">Videos</a></li>
+                        <li><a href="app.html" class="text-white">Descarga nuestra app</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@animalessalvajes.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +54 11 2250 8166</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Animales Salvajes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
