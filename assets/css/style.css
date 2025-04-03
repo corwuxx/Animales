@@ -3,21 +3,22 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: cornsilk;
 }
 
 /* Sección principal */
 .principal {
-    background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
+    background: linear-gradient(140deg, #25a067 0%, #02c7649c 100%);
 }
 
 /* Tarjetas de animales */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Formulario de contacto */
@@ -33,7 +34,7 @@ body {
     overflow: hidden;
 }
 
-/* Responsive adjustments */
+/* Medidas para responsive */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
