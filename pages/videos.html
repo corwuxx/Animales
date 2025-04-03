@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales Salvajes - Videos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                Animales Salvajes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/app.html">App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Videos -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Videos de Animales Salvajes</h2>
+            
+            <!-- Filtro por animal -->
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Selecciona un animal</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="videos.html?animal=leon" class="btn btn-outline-primary">Leones</a>
+                                <a href="videos.html?animal=elefante" class="btn btn-outline-primary">Elefantes</a>
+                                <a href="videos.html?animal=tigre" class="btn btn-outline-primary">Tigres</a>
+                                <a href="videos.html?animal=oso" class="btn btn-outline-primary">Osos</a>
+                                <a href="videos.html?animal=jirafa" class="btn btn-outline-primary">Jirafas</a>
+                                <a href="videos.html" class="btn btn-primary">Todos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Videos -->
+            <div class="row g-4" id="videosContainer">
+                <!-- Los videos se cargarán aquí según la selección -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Animales Salvajes</h5>
+                    <p>Descubre la belleza y diversidad de la vida salvaje en nuestro planeta.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white">Inicio</a></li>
+                        <li><a href="videos.html" class="text-white">Videos</a></li>
+                        <li><a href="../pages/app.html" class="text-white">Descarga nuestra app</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@animalessalvajes.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +54 11 2250 8166</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Animales Salvajes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Obtener parámetro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const animalSeleccionado = urlParams.get('animal');
+        
+        // Datos de videos (podrías cargarlos desde una API)
+        const videos = {
+            leon: [
+                { id: 'dXAmJAFqQqo', title: 'León cazando en la sabana' },
+                { id: 'JPe2mwq96cw', title: 'Leones en manada' },
+                { id: 'JPe2mwq96cw', title: 'Cachorros de león jugando' }
+            ],
+            elefante: [
+                { id: 'Aw6GXiC7Txk', title: 'Elefantes en el río' },
+                { id: 'd3PCYVqmTC4', title: 'Elefante bebé aprendiendo' }
+            ],
+            tigre: [
+                { id: 'FK3dav4bA4s', title: 'Tigre de Bengala en acción' },
+                { id: 'XH7O6Y7zNQY', title: 'Tigres en su hábitat natural' }
+            ],
+            oso: [
+                { id: 't6OD8S1L1oo', title: 'Osos pardos pescando' },
+                { id: 'TQQXstNh45g', title: 'Osos polares en el Ártico' }
+            ],
+            jirafa: [
+                { id: 'wH0Itk3qj_Q', title: 'Jirafas comiendo de los árboles' },
+                { id: '5Rr0J4FZo3o', title: 'Manada de jirafas en movimiento' }
+            ]
+        };
+        
+        // Mostrar videos según selección
+        function mostrarVideos() {
+            const container = document.getElementById('videosContainer');
+            container.innerHTML = '';
+            
+            let videosAMostrar = [];
+            
+            if (animalSeleccionado && videos[animalSeleccionado]) {
+                videosAMostrar = videos[animalSeleccionado];
+                document.title = `Videos de ${animalSeleccionado.charAt(0).toUpperCase() + animalSeleccionado.slice(1)} - Animales Salvajes`;
+            } else {
+                // Mostrar todos los videos si no hay selección específica
+                for (const animal in videos) {
+                    videosAMostrar = videosAMostrar.concat(videos[animal]);
+                }
+                document.title = "Todos los videos - Animales Salvajes";
+            }
+            
+            if (videosAMostrar.length === 0) {
+                container.innerHTML = '<div class="col-12 text-center"><p>No hay videos disponibles para este animal.</p></div>';
+                return;
+            }
+            
+            videosAMostrar.forEach(video => {
+                const col = document.createElement('div');
+                col.className = 'col-md-6 col-lg-4';
+                col.innerHTML = `
+                    <div class="card h-100 shadow">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/${video.id}" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${video.title}</h5>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        }
+        
+        // Ejecutar al cargar la página
+        document.addEventListener('DOMContentLoaded', mostrarVideos);
+    </script>
+</body>
+</html>
