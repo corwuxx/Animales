@@ -1,0 +1,29 @@
+@use '../utilities' as *;  // Importa el archivo con los mixins
+@use '../config' as *;     // Importa las variables
+
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $text-color;
+  }
+
+  // Todos las etiquetas h
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    
+    @include responsive($breakpoint-md) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .hero p {
+    @include responsive($breakpoint-md) {
+      font-size: 1rem;
+    }
+  }

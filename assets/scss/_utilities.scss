@@ -1,0 +1,13 @@
+@use 'config' as *;  // Importa el archivo config
+
+@mixin transition($properties...) {
+    transition: $properties;
+    transition-duration: $transition-time;
+    transition-timing-function: ease;
+  }
+  
+  @mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }

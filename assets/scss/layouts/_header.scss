@@ -1,0 +1,8 @@
+@use '../utilities' as *;  // Importa el archivo con los mixins
+@use '../config' as *;  // Importa el archivo config
+
+.principal {
+    background: linear-gradient(140deg, $primary-color 0%, $secondary-color 100%);
+    color: $white;
+    padding: 3rem 0;
+  }

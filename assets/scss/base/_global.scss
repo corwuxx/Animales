@@ -1,0 +1,5 @@
+@use '../config' as *;
+
+body {
+    background-color: $background-color;
+  }

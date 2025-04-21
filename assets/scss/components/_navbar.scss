@@ -1,0 +1,20 @@
+@use '../utilities' as *;  // Importa el archivo con los mixins
+@use '../config' as *;  // Importa el archivo config
+
+.navbar {
+    &-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    &-nav {
+      .nav-link {
+        @include transition(color);
+        
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }

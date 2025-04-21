@@ -1,0 +1,29 @@
+@use '../utilities' as *;  // Importa el archivo con los mixins
+@use '../config' as *;  // Importa el archivo config
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    @include transition(background-color, color);
+    
+    &-primary {
+      background-color: $primary-color;
+      color: $white;
+      
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+    
+    &-outline-primary {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+  }

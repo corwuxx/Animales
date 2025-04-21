@@ -1,0 +1,21 @@
+@use '../utilities' as *;  // Importa el archivo con los mixins
+@use '../config' as *;  // Importa el archivo config
+
+.card {
+    @include transition(transform, box-shadow);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba($black, 0.5);
+    }
+    
+    &-body {
+      padding: 1.5rem;
+    }
+    
+    &-title {
+      margin-bottom: 0.75rem;
+    }
+  }

@@ -1,0 +1,23 @@
+@use '../utilities' as *;  // Importa el archivo con los mixins
+@use '../config' as *;  // Importa el archivo config
+
+.footer {
+    background-color: $dark;
+    color: $white;
+    padding: 2rem 0;
+    
+    a {
+      color: $white;
+      text-decoration: none;
+      @include transition(color);
+      
+      &:hover {
+        color: lighten($primary-color, 20%);
+      }
+    }
+    
+    hr {
+      border-color: rgba($white, 0.1);
+      margin: 1.5rem 0;
+    }
+  }
